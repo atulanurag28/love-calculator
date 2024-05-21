@@ -1,0 +1,119 @@
+HTML
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+
+    <h1>Love <i class="fas fa-heart"></i> Calculator</h1>
+    <p id="p1">Get Your Own Love Instantly <sup><i class="fas fa-star" style="font-size: x-small;"></i></sup></p>
+    
+    <table>
+        <tr>
+            <td><sup><i class="fas fa-star" style="font-size: x-small;"></i></sup> Your Name</td>
+            <td><sup><i class="fas fa-star" style="font-size: x-small;"></i></sup> His/Her Name</td>
+        </tr>
+        <tr>
+            <td><input type="text" placeholder="Enter Your Name"></td>
+            <td><input type="text" placeholder="Enter His/Her Name"></td>
+        </tr>
+    </table>
+
+    <button type="button" onclick="calculate()"><i class="fas fa-heart"></i> CALCULATE <i class="fas fa-heart"></i> </button>
+
+    <p id="result">RESULT</p>
+
+
+<script src="script.js"></script>
+    
+</body>
+</html>
+
+
+
+CSS
+
+
+
+body{
+    background-color: #fc3838;
+    color: white;
+}
+h1{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bolder;
+}
+
+#p1{
+    text-align: center;
+    font-size: x-large;
+    margin-top: -45px;
+}
+
+table{
+    text-align: center;
+    padding-left: 27%;
+    padding-top: 1.5%;
+    font-size: x-large;
+}
+
+input{
+    height: 60px;
+    width: 260px;
+    border-radius: 56%;
+    text-align: center;
+    margin: 7%;
+    margin-right: 20px;
+    border-color: white;
+    color: #fc3838;
+    font-size: large;
+    background-color: snow;
+}
+
+button{
+    text-align: center;
+    background-color: white;
+    color: #fc3838;
+    margin-left: 505px;
+    margin-top: 15px;
+    height: 65px;
+    width: 235px;
+    border-radius: 32px;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+#result{
+    text-align: center;
+    font-size: x-large;
+    text-decoration: underline;
+    padding-top: 2%;
+}
+
+
+
+JAVASCRIPT
+
+
+function calculate(){
+    var x=Math.floor(Math.random()*100)+1;
+    document.getElementsByTagName("h1")[0].innerHTML= " <i class='fas fa-heart'></i> Your Love Percent Is "+x+"% <i class='fas fa-heart'></i>";
+    if(x>=80){
+        document.getElementById("result").innerHTML="<i class='fas fa-heart'></i> CONGRATULATION, YOU ARE MADE FOR EACH OTHER !! <i class='fas fa-heart'></i>";
+    }
+    else{
+        document.getElementById("result").innerHTML="ALL THE BEST FOR YOUR RELATIONSHIP !!";
+    }
+    document.getElementById("result").style.fontSize="xx-large";
+
+
+}
